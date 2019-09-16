@@ -5,11 +5,13 @@ function PlayerCard({ name, country, searches }) {
   return (
     <Card>
       <Card.Content>
-        <Card.Header>{name}</Card.Header>
+        <Card.Header data-testid="name">{name}</Card.Header>
         <Card.Meta>
-          <span className="date">{searches}</span>
+          <span className="date" data-testid="search-amount">
+            {searches}
+          </span>
         </Card.Meta>
-        <Card.Description>{country}</Card.Description>
+        <Card.Description data-testid="country">{country}</Card.Description>
       </Card.Content>
     </Card>
   );
